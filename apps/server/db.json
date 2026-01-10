@@ -1,0 +1,15 @@
+{
+  "postulantes": [
+    {
+      "id": "c5a2af57-1787-4eb7-adf6-cfdad452a1b1",
+      "nombreCompleto": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "telefono": "+54 11 5555-5555",
+      "georeferencia": "Buenos Aires, AR",
+      "fechaNacimiento": "1995-06-20",
+      "fechaHoraCreacion": "2026-01-10T21:18:08.971Z",
+      "fechaHoraModificacion": null,
+      "fechaHoraEliminacion": null
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "generador_cv",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+  "dev:server": "npm run dev -w server",
+  "dev:client": "npm run dev -w client",
+  "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
