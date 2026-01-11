@@ -5,6 +5,9 @@ import { RegistrarPostulanteUseCase } from "../applicacion/RegistrarPostulanteUs
 import { CurriculumController } from "./curriculum.controller.js";
 import validadorSchema from "../../../code/middlewares/validarSchema.middleware.js";
 import { registrarPostulanteSchema } from "../../../code/schemas/registrarPostulante.schema.js";
+import { ModificarPostulanteUseCase } from "../applicacion/ModificarPostulanUseCase.js";
+import { ListarPostulantesUseCase } from "../applicacion/ListarPostulantesUserCase.js";
+import { EliminarPostulanteUseCase } from "../applicacion/EliminarPostulanteUseCase.js";
 
 
 
@@ -24,13 +27,15 @@ const eliminarPostulante = new EliminarPostulanteUseCase(postulanteRepository);
 const curriculumController = new CurriculumController(
     registrarPostulante,
     modificarPostulante,
-    listarPostulantes,
-    eliminarPostulante
+    eliminarPostulante,
+    listarPostulantes
+    
 );
 
 // Rutas
-curriculumsRouter.post('/postulantes', validadorSchema(registrarPostulanteSchema), (req, res, next) => curriculumController.registrarPostulante(req, res, next));
+curriculumsRouter.post('/postulantes/registrar', validadorSchema(registrarPostulanteSchema), (req, res, next) => curriculumController.registrarPostulante(req, res, next));
 curriculumsRouter.put('/postulantes/:id', (req, res, next) => curriculumController.modificarPostulante(req, res, next));
 curriculumsRouter.delete('/postulantes/:id', (req, res, next) => curriculumController.eliminarPostulante(req, res, next));
-curriculumsRouter.get('/postulantes', (req, res, next) => curriculumController.listarPostulantes(req, res, next));
+curriculumsRouter.get('/postulantes/listar', (req, res, next) => curriculumController.listarPostulantes(req, res, next));
+
 export default curriculumsRouter;

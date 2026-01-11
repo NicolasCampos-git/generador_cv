@@ -10,6 +10,17 @@
       "fechaHoraCreacion": "2026-01-10T21:18:08.971Z",
       "fechaHoraModificacion": null,
       "fechaHoraEliminacion": null
+    },
+    {
+      "id": "7b8c98a8-b2f0-4dde-946b-70f85dd25818",
+      "nombreCompleto": "juan vanzeti",
+      "email": "sdfasd@eewr.com",
+      "telefono": "12342341234",
+      "georeferencia": "asdf",
+      "fechaNacimiento": "2026-01-21",
+      "fechaHoraCreacion": "2026-01-11T17:52:46.145Z",
+      "fechaHoraModificacion": null,
+      "fechaHoraEliminacion": null
     }
   ]
 }

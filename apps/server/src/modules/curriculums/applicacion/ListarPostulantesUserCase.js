@@ -5,7 +5,7 @@ export class ListarPostulantesUseCase {
     }
 
     async execute(filters = {}) {
-        return await this.postulantesRepository.findAll(filters);
+        return await this.postulantesRepository.listarPostulantes(filters);
     }
 }
 
